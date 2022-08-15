@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+
+  <aside class="aside">
+
+  </aside>
+  <div class="card-front">
+    <img class="card-logo" src="/images/card-logo.svg" alt="">
+    <p>0000 0000 0000 0000</p>
+    <div class="card-text">
+      <p>JANE APPLESEED</p>
+      <p> 00/00</p>
+    </div>
+  </div>
+  <div class=card-reverse>
+    <img class="card-back" src="/images/bg-card-back.png" alt="">
+    <p class="card-number">000</p>
+  </div>
+  <!-- <article> -->
+    <div class="container-fluid">
+      <div class="row">
+        <form class = "form-control form-control-sm" action="" method="post" enctype="multipart/form-data">
+          <label for="cardholder">CARDHOLDER NAME</label>
+          <input class="input" type="text" value="Jane Appleseed">
+          <label for="cardnumber">CARD NUMBER</label>
+          <input class="input" type="text" value="e.g. 1234 5678 9123 0000">
+          <div class="label">
+            <label for="Exp Date">EXP. DATE<span class="expiry"></span>(MM/YY)</label>
+            <label id="cvc" for="CVC">CVC</label>
+          </div>
+          <div class="card-back-bottom">
+            <input class="month" type="text" name="month" id="" value="MM">
+            <input class="year" type="text" name="year" id="" value="YY">
+            <input type="text" name="" id="c-v-c" value="eg 123">
+          </div>
+          <button class="button-confirm">Confirm</button>
+        </form>
+      </div>
+    </div>
+    <!-- Completed state start -->
+  <!-- </article> -->
+
+
+</body>
+<footer class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Your Name Here</a>.
+</footer>
+
+</html>
