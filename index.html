@@ -29,42 +29,65 @@
   </aside>
   <div class="card-front">
     <img class="card-logo" src="/images/card-logo.svg" alt="">
-    <p>0000 0000 0000 0000</p>
+    <p id="card-number">0000 0000 0000 0000</p>
     <div class="card-text">
-      <p>JANE APPLESEED</p>
-      <p> 00/00</p>
+      <p id="card-name">JANE APPLESEED</p>
+      <span class="date">
+        <p id="mm">00</p>/<p id="yy">00</p>
+      </span>
     </div>
   </div>
   <div class=card-reverse>
     <img class="card-back" src="/images/bg-card-back.png" alt="">
-    <p class="card-number">000</p>
+    <p id="card-cvc">000</p>
   </div>
   <!-- <article> -->
-    <div class="container-fluid">
-      <div class="row">
-        <form class = "form-control form-control-sm" action="" method="post" enctype="multipart/form-data">
-          <label for="cardholder">CARDHOLDER NAME</label>
-          <input class="input" type="text" value="Jane Appleseed">
-          <label for="cardnumber">CARD NUMBER</label>
-          <input class="input" type="text" value="e.g. 1234 5678 9123 0000">
-          <div class="label">
-            <label for="Exp Date">EXP. DATE<span class="expiry"></span>(MM/YY)</label>
-            <label id="cvc" for="CVC">CVC</label>
+  <div class="container-fluid">
+    <div class="row">
+
+      <form id="form" class="form-control form-control-sm" action="#">
+        <label for="cardholder">CARDHOLDER NAME</label>
+        <input class="input" id="cardholdername" type="text" name="cardholder" placeholder="e.g Jane Appleseed"
+          maxlength="16" oninput="this.value = this.value.toUpperCase()" onkeydown="changeName();">
+        <div id="name-empty"></div>
+        <div id="cardname-error"></div>
+        <label for="cardnumber">CARD NUMBER</label>
+        <input class="input" id="cardnumber" type="text" name="number" placeholder="e.g. 1234 5678 9123 0000"
+          minlength="19" maxlength="19" onkeydown="changeNumber();">
+        <div id="number-empty"></div>
+        <div id="cardnumber-error"></div>
+        <div class="label">
+          <label for="Exp Date">EXP. DATE<span class="expiry"></span>(MM/YY)</label>
+          <label id="cvc" for="CVC">CVC</label>
+        </div>
+        <div class="card-back-bottom">
+          <div class="month-date">
+            <input class="month" type="number" name="month" id="month" placeholder="MM" onkeydown="changeMM()"
+              minlength="2" maxlength="2" maxvalue="12">
+            <div id="month-empty"></div>
           </div>
-          <div class="card-back-bottom">
-            <input class="month" type="text" name="month" id="" value="MM">
-            <input class="year" type="text" name="year" id="" value="YY">
-            <input type="text" name="" id="c-v-c" value="eg 123">
+          <div class="year-date">
+            <input class="year" type="number" name="year" id="year" placeholder="YY" onkeydown="changeYY()"
+              minlength="2" maxlength="2" maxnumber="12">
+            <div id="year-empty"></div>
           </div>
-          <button class="button-confirm">Confirm</button>
-        </form>
-      </div>
+          <div class="cvc-num">
+            <input type="number" name="cvcnumber" id="c-v-c" placeholder="eg 123" maxlength="3" minlength="3"
+              onkeydown="changeCVC()">
+            <div id="cvc-empty"></div>
+          </div>
+        </div>
+        <button type="submit" class="button-confirm">Confirm</button>
+      </form>
+
     </div>
-    <!-- Completed state start -->
+  </div>
+  <!-- Completed state start -->
   <!-- </article> -->
 
 
 </body>
+<script src="/javascript/scripts.js"></script>
 <footer class="attribution">
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
   Coded by <a href="#">Your Name Here</a>.
