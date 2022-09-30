@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    top: 0;
+    bottom: 0;
    
 }
 .aside {
@@ -19,7 +21,7 @@ label {
 
 .container-fluid {
     position: relative;
-    min-height: 100vh;
+    min-height: 20%;
 }
 
 .row {
@@ -34,6 +36,13 @@ label {
     margin: 30% !important;
     border: none !important;
 }
+
+.svg-container {
+    padding-top: 20%;
+    margin-left: 50%;
+    text-align: center;
+    display: none;
+  }
 
 .form-control-sm {
     padding: 4% 4% !important;
@@ -127,7 +136,7 @@ label {
     color: hsl(278, 68%, 11%);
 }
 
-#khgvjc-v-c{
+#c-v-c{
     font-size: 12px;
     font-family:'Space Grotesk', sans-serif;
     color: hsl(278, 68%, 11%)
@@ -318,6 +327,12 @@ label {
       margin-left: 8%;
   }
 
+
+  /* .icon-complete {
+      height: 100%;
+      margin-top: 20%;
+  } */
+
   @media screen and (max-width: 900px) {
       .card-front {
           margin-top: 35%;
@@ -404,4 +419,22 @@ label {
         margin-top: -80% !important;
         padding-left: 0;
      }
+
+     .container {
+         height: 0%;
+         width: 100vw;
+     }
+
+     .svg-container {
+        /* margin-left: 50%;
+        PADDING-top: 10%;
+        border: none !important;
+        border: solid red;
+        display: none;
+        flex-direction: column; */
+        margin-left: 0 !important;
+        margin-top: -100% !important;
+        padding-left: 0;
+        display: none;
+      }
   }
