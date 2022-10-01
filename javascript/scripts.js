@@ -187,11 +187,20 @@ function changeYY() {
     document.getElementById("yy").innerText = inputYear.value;
     let yearNum = document.getElementById("year").value;
     yearNum = document.getElementById("yy").innerText;
-  };
+  }
 }
 
 $('#confirm-btn').click(function toggleDivs () {
-  if(nameInput.value !== "" && numInput.value !== "" && monthInput.value !== "" && yearInput.value !== "" && cvcInput.value !== 0) {
+  if(nameInput.value !== "" 
+    && monthInput.value !== ""  
+    && yearInput.value !== ""
+    && cvcInput.value !== ""
+    &&nameInput.value.match(patternLetters)
+    &&numInput.value.match(patternNumbers)
+    &&yearInput.value.match(patternNumbers)
+    &&monthInput.value.match(patternNumbers)
+    &&cvcInput.value.match(patternNumbers))
+  {
     // $('#form-field').css("display", "none");
     // $('.svg-container').css("display", "block");
     $('#form-field').hide();
