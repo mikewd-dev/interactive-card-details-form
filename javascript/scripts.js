@@ -36,11 +36,9 @@ form.addEventListener("submit", (e) => {
       cardnameerror.innerText = "";
       return true;
     }
-    // redirect("card.html");
   }
-// });
 
-// form.addEventListener("submit", (e) => {
+
   if (numInput.value === "" || numInput.value == null) {
     numberemptyerror.innerText = "Can't be blank";
     numInput.style.border = "1px solid hsl(0, 100%, 66%)";
@@ -55,81 +53,54 @@ form.addEventListener("submit", (e) => {
       return true;
     }
   }
-// });
-
-// form.addEventListener("submit", (e) => {
   if (monthInput.value === "" || monthInput.value == null) {
   
     monthemptyerror.innerText = "Can't be blank";
     monthInput.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
     monthemptyerror.innerText = "";
-    return true;
-  }
-// });
 
-// form.addEventListener("submit", (e) => {
   if (!monthInput.value.match(patternNumbers)) {
     montherror.innerText = "Wrong format, numbers only";
     monthInput.style.border = "1px solid hsl(0, 100%, 66%)";
+    return false;
   } else {
     montherror.innerText = "";
-    return true;
+    return true
   }
-// });
-
-// form.addEventListener("submit", (e) => {
+}
+  
   if (yearInput.value === "" || yearInput.value == null) {
    
     yearemptyerror.innerText = "Can't be blank";
     yearInput.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
     yearemptyerror.innerText = "";
-    return true;
-  }
-// });
-
-// form.addEventListener("submit", (e) => {
   if (!yearInput.value.match(patternNumbers)) {
-   
     yearerror.innerText = "Wrong format, umbers only";
     yearInput.style.border = "1px solid hsl(0, 100%, 66%)";
+    return false;
   } else {
     yearerror.innerText = "";
     return true;
   }
-// });
+}
 
-// form.addEventListener("submit", (e) => {
-  if (yearInput.value === "" || yearInput.value == null) {
-    
-    yearemptyerror.innerText = "Can't be blank";
-    yearInput.style.border = "1px solid hsl(0, 100%, 66%)";
-  } else {
-    yearemptyerror.innerText = "";
-    return true;
-  }
-// });
-
-// form.addEventListener("submit", (e) => {
   if (cvcInput.value === "" || cvcInput.value == null) {
    
     cvcemptyerror.innerText = "Can't be blank";
     cvcInput.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
     cvcemptyerror.innerText = "";
-    return true;
-  }
-// });
-
-// form.addEventListener("submit", (e) => {
   if (!cvcInput.value.match(patternNumbers)) {
     cvcerror.innerText = "Numbers only";
     cvcInput.style.border = "1px solid hsl(0, 100%, 66%)";
+    return false;
   } else {
     cvcerror.innerText = "";
     return true;
   }
+}
 });
 
 function changeName() {
