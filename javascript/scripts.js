@@ -54,7 +54,7 @@ form.addEventListener("submit", (e) => {
     }
   }
   if (monthInput.value === "" || monthInput.value == null) {
-  
+
     monthemptyerror.innerText = "Can't be blank";
     monthInput.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
@@ -69,9 +69,9 @@ form.addEventListener("submit", (e) => {
     return true
   }
 }
-  
+
   if (yearInput.value === "" || yearInput.value == null) {
-   
+
     yearemptyerror.innerText = "Can't be blank";
     yearInput.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
@@ -87,7 +87,7 @@ form.addEventListener("submit", (e) => {
 }
 
   if (cvcInput.value === "" || cvcInput.value == null) {
-   
+
     cvcemptyerror.innerText = "Can't be blank";
     cvcInput.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
@@ -162,8 +162,8 @@ function changeYY() {
 }
 
 $('#confirm-btn').click(function toggleDivs () {
-  if(nameInput.value !== "" 
-    && monthInput.value !== ""  
+  if(nameInput.value !== ""
+    && monthInput.value !== ""
     && yearInput.value !== ""
     && cvcInput.value !== ""
     &&nameInput.value.match(patternLetters)
