@@ -68,7 +68,12 @@ form.addEventListener("submit", (e) => {
     montherror.innerText = "";
     return true
   }
+
 }
+
+// if(monthInput.value > 12){
+//     monthInput.value = 12;
+// }
 
   if (yearInput.value === "" || yearInput.value == null) {
 
@@ -144,7 +149,15 @@ function changeCVC() {
 function changeMM() {
   let inputMonth = document.getElementById("month");
 
-  inputMonth.onkeyup = () => {
+  // inputMonth.onkeyup = () => {
+  //   document.getElementById("mm").innerText = inputMonth.value;
+  //   // let monthNum = document.getElementById("month").value;
+  //   monthNum = document.getElementById("mm").innerText;
+
+  // };
+
+    inputMonth.onchange = () => {
+
     document.getElementById("mm").innerText = inputMonth.value;
     // let monthNum = document.getElementById("month").value;
     monthNum = document.getElementById("mm").innerText;
@@ -154,11 +167,17 @@ function changeMM() {
 function changeYY() {
   let inputYear = document.getElementById("year");
 
-  inputYear.onkeyup = () => {
-    document.getElementById("yy").innerText = inputYear.value;
-    let yearNum = document.getElementById("year").value;
-    yearNum = document.getElementById("yy").innerText;
-  }
+  // inputYear.onkeyup = () => {
+  //   document.getElementById("yy").innerText = inputYear.value;
+  //   let yearNum = document.getElementById("year").value;
+  //   yearNum = document.getElementById("yy").innerText;
+  // }
+
+    inputMonth.onchange = () => {
+    document.getElementById("mm").innerText = inputMonth.value;
+    // let monthNum = document.getElementById("month").value;
+    monthNum = document.getElementById("mm").innerText;
+  };
 }
 
 $('#confirm-btn').click(function toggleDivs () {

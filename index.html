@@ -13,12 +13,12 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
   </script>
- 
- 
+
+
 
 
   <title>Frontend Mentor | Interactive card details form</title>
@@ -68,14 +68,14 @@
         </div>
         <div class="card-back-bottom">
           <div class="month-date">
-            <input class="month" type="number" name="month" id="month" placeholder="MM" onkeydown="changeMM()"
-              minlength="2" maxlength="2" maxvalue="12">
+            <input class="month" type="number" name="month" id="month" placeholder="MM" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;"
+              minlength="2" maxlength="2" min="1" max="12">
             <div id="month-empty"></div>
             <div id="month-error"></div>
           </div>
           <div class="year-date">
-            <input class="year" type="number" name="year" id="year" placeholder="YY" onkeydown="changeYY()"
-              minlength="2" maxlength="2" maxnumber="12">
+            <input class="year" type="number" name="year" id="year" placeholder="YY" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;""
+              minlength="2" maxlength="2" min="1" max="29">
             <div id="year-empty"></div>
             <div id="year-error"></div>
           </div>
